@@ -1,8 +1,10 @@
 package com.lff.demo.entity;
 
+
+import java.io.Serializable;
 import java.math.BigInteger;
 
-public class Student {
+public class Student implements Serializable {
 
     private Integer stuId;
 
@@ -10,7 +12,19 @@ public class Student {
 
     private BigInteger stuNo;
 
+    private int stuLevel;
+
     private Boolean isVip;
+
+    private Boolean isDeleted;
+
+    public Boolean getIsDeleted() {
+        return isDeleted;
+    }
+
+    public void setIsDeleted(Boolean deleted) {
+        isDeleted = deleted;
+    }
 
     public Integer getStuId() {
         return stuId;
@@ -36,11 +50,19 @@ public class Student {
         this.stuNo = stuNo;
     }
 
-    public Boolean getVip() {
+    public Boolean getIsVip() {
         return isVip;
     }
 
-    public void setVip(Boolean vip) {
+    public void setIsVip(Boolean vip) {
         isVip = vip;
+    }
+
+    public int getStuLevel() {
+        return stuLevel;
+    }
+
+    public void setStuLevel(int stuLevel) {
+        this.stuLevel = stuLevel;
     }
 }
